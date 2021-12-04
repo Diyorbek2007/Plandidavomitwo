@@ -15,15 +15,8 @@
 - (14) Layout papkasini ichidagi index.js va faylini ichida <Header/> chaqiramiz
 - (15) containers papkasini ichida Home, Signin va Signup papkalarini ochamiz va hammasini ichida index.js faylini ochamiz
 - (16) App.js faylini ichida import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-<div className="App">
-    <Router>
-        <Routes>
-            <Route path="/" exact component={Home} />
-            <Route path="/signin" component={Signin} />
-            <Route path="/signup" component={Signup} />
-        </Routes>
-    </Router>
-<div> kodlarini yozamiz
+
+
 - (17) return(
     <Layout>
         <p style={{margin: '5rem', background='#fff'}} className="text-center">
@@ -32,7 +25,8 @@
         </p>
     </Layout>
 )
-- (18) import { NavLink, Link } from 'react-router-dom
+- (18) Header papkasini ichidagi index.jsda
+       NavLink, Link import qilamiz 
 
        <Link className="navbar-brand">Admin Dasboard</Link>
        
@@ -47,9 +41,7 @@
 - (19) Signin va Signup papkalarini ichidagi index.js faylarini ichida:
   
        return(
-           <Layout>
-                <h1>...</h1>
-           </Layout>
+           Layoutni chaqiramiz
        )
 - (20) react-bootstrap.github.io saytidan kerakli formni olamiz va Signin va Signup papkalarini ichidagi index.js fayliga qoyamiz
 - (21) components papkasini ichida UI papkasini ochamiz va uni ichida Input papkasi ochamiz, Input papkasini ichida index.js ochamiz

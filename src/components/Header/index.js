@@ -1,55 +1,3 @@
-// import React from 'react'
-// import { Container, Navbar, Nav } from 'react-bootstrap'
-// import { useSelector, useDispatch } from 'react-redux'
-// import {NavLink , Link} from 'react-router-dom'
-// import { signout } from '../../actions'
-
-// export default function Header() {
-
-//     const auth = useSelector(state => state.auth)
-//     const dispatch = useDispatch()
-
-//     const logout = () => {
-//         dispatch(signout());
-//     }
-
-//     const renderLoggedInLinks = () => {
-//         return (
-//             <Nav>
-//               <li className='nav-item'>
-//                   <span className='nav-link' onClick={logout}>Sign Out</span>
-//               </li>
-//             </Nav>
-//         )
-//     }
-
-//     const renderNonLoggedInLinks = () => {
-//         return (
-//             <Nav>
-//                 <li className='nav-item'>
-//                     <NavLink to='/signin' className='nav-link'>Sign In</NavLink>
-//                 </li>
-//                 <li className='nav-item'>
-//                     <NavLink to='/signup' className='nav-link'>Sign Up</NavLink>
-//                 </li>
-//             </Nav>
-//         )
-//     }
-
-//     return (
-//         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" style={{zIndex: 1}}>
-//             <Container fluid>
-//                 {/* <Navbar.Brand href="/">Admin Dashboard</Navbar.Brand> */}
-//                 <Link to='/' className='navbar-brand'>Admin Dashboard</Link>
-//                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-//                 <Navbar.Collapse id="responsive-navbar-nav">
-//                   {auth.authenticate ? renderLoggedInLinks() : renderNonLoggedInLinks()}
-//                 </Navbar.Collapse>
-//             </Container>
-//         </Navbar>
-//     )
-// }
-
 import React from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { NavLink, Link } from 'react-router-dom';
@@ -69,12 +17,9 @@ function Header() {
     const renderLoggedInLinks = () => {
         return (
             <Nav>
-
                 <li className="nav-item">
                     <span className="nav-link" onClick={logout}>Sign Out</span>
                 </li>
-
-
             </Nav>
 
         );
@@ -89,10 +34,7 @@ function Header() {
                 <li className="nav-item">
                     <NavLink to="/signup" className="nav-link">Sign Up</NavLink>
                 </li>
-
-
             </Nav>
-
         );
     }
 
@@ -104,7 +46,6 @@ function Header() {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         {/* <Nav className="me-auto">
-                    
                         </Nav> */}
                         {/* <Nav>
                             <li className="nav-item">
@@ -113,10 +54,7 @@ function Header() {
                             <li className="nav-item">
                                 <NavLink to="/signup" className="nav-link">Sign Up</NavLink>
                             </li>
-
-
                         </Nav> */}
-
                         {auth.authenticate ? renderLoggedInLinks() : renderNonLoggedInLinks()}
                     </Navbar.Collapse>
                 </Container>
