@@ -5,9 +5,9 @@ const token = window.localStorage.getItem('token');
 
 const axiosInstance = axios.create({
     baseURL: api, 
-    headers: {
-        'Authorazation': token ? `Bearer ${token}` : ''
-    }
+    // headers: {
+    //     'Authorazation': token ? `Bearer ${token}` : ''
+    // }
 });
 
 export default axiosInstance;
