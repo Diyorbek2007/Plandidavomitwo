@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import Layout from '../../components/Layout';
 import { Container, Form, Row, Col, Button } from 'react-bootstrap';
 import Input from '../../components/UI/Input/index';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch} from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
 import { signup } from '../../actions'
 
 function Signup(props) {

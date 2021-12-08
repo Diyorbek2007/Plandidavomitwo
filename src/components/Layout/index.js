@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import Header from '../Header/index';
+import Header from '../Header';
 import "./style.css"
 
 function Layout (props) {
@@ -20,7 +20,7 @@ function Layout (props) {
                                 <li><NavLink to={`/orders`}>Orders</NavLink></li>
                             </ul>
                         </Col>
-                        <Col md={9} style={{marginLeft : '20%', paddingTop: '60px'}}>
+                        <Col md={10} style={{marginLeft : 'auto', paddingTop: '60px'}}>
                             {props.children}
                         </Col>
                     </Row>

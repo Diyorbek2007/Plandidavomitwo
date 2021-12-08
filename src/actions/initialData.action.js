@@ -1,8 +1,11 @@
-import axios from "axios"
-import { categoryConstants, productsConstants } from "./constants"
+import axios from "../helpers/axios"
+import { 
+    categoryConstants, 
+    productsConstants 
+} from "./constants"
 
 export const getInitialData = () => {
-    return async dispatch => {
+    return async (dispatch) => {
         const res = await axios.post(`/initialData`)
         console.log(res);
         if(res.status === 200){

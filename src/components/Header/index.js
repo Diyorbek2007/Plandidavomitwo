@@ -10,7 +10,7 @@ function Header() {
     const auth = useSelector(state => state.auth)
     const dispatch = useDispatch();
     const logout = () => {
-         dispatch (signout())
+        dispatch (signout())
     }
 
 
@@ -29,10 +29,10 @@ function Header() {
         return (
             <Nav>
                 <li className="nav-item">
-                    <NavLink to="/signin" className="nav-link">Sign In</NavLink>
+                    <NavLink to="signin" className="nav-link">Sign In</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to="/signup" className="nav-link">Sign Up</NavLink>
+                    <NavLink to="signup" className="nav-link">Sign Up</NavLink>
                 </li>
             </Nav>
         );

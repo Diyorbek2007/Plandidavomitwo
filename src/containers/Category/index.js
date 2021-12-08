@@ -36,7 +36,6 @@ function Category(props) {
     const handleShow = () => setShow(true);
 
     const renderCategories = (categories) => {
-
         let myCategories = [];
         for(let category of categories){
             myCategories.push(
@@ -51,9 +50,11 @@ function Category(props) {
     }
 
     const createCategoryList = (categories, options = []) => {
-
         for(let category of categories){
-            options.push({value: category._id, name: category.name})
+            options.push({
+                value: category._id,
+                name: category.name
+            })
             if(category.children.length > 0){
                 createCategoryList(category.children, options)
             }

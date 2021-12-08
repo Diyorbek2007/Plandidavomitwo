@@ -35,7 +35,8 @@ function Signin(props) {
                     <Row style={{ marginTop: '50px' }}>
                         <Col md={{ span: 6, offset: 3 }}>
                             <Form onSubmit={userLogin} >
-                                <Input label="Email"
+                                <Input 
+                                    label="Email"
                                     placeholder="Email"
                                     value={email}
                                     type="email"
