@@ -20,7 +20,7 @@ function Layout (props) {
                                 <li><NavLink to={`/orders`}>Orders</NavLink></li>
                             </ul>
                         </Col>
-                        <Col md={9} style={{marginLeft : 'auto'}}>
+                        <Col md={9} style={{marginLeft : '20%', paddingTop: '60px'}}>
                             {props.children}
                         </Col>
                     </Row>
