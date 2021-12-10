@@ -24,7 +24,6 @@ const buildNewCategories = (parentId , categories, category) => {
     }
 
     for(let cat of categories){
-
         if(cat._id === parentId){
             myCategories.push({
                 ...cat,

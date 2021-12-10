@@ -39,7 +39,7 @@ function Category(props) {
         let myCategories = [];
         for(let category of categories){
             myCategories.push(
-                <li key={category.name}>
+                <li key={category._id}>
                     {category.name}
                     {category.children.length > 0 ? (<ul>{renderCategories(category.children)}</ul>) : null}
                 </li>
