@@ -26,20 +26,24 @@ export const getAllCategory = () => {
 export const addCategory = (form) => {
     return async dispatch => {
         dispatch({ type: categoryConstants.ADD_NEW_CATEGORY_REQUEST })
-        const res = await axios.post(`/category/create`, form)
-        console.log(res.data);
-
-        if(res.status === 201){
-            dispatch({
-                type: categoryConstants.ADD_NEW_CATEGORY_SUCCESS,
-                payload:{ category: res.data.category} 
-            })
-        }else{
-            dispatch({
-                type: categoryConstants.ADD_NEW_CATEGORY_FAILURE,
-                payload: res.data.error
-            })
+        try {
+            const res = await axios.post(`/category/create`, form)
+            if(res.status === 201){
+                dispatch({
+                    type: categoryConstants.ADD_NEW_CATEGORY_SUCCESS,
+                    payload:{ category: res.data.category} 
+                })
+            }else{
+                dispatch({
+                    type: categoryConstants.ADD_NEW_CATEGORY_FAILURE,
+                    payload: res.data.error
+                })
+            }
+        } catch (error) {
+            
+            console.log(error.response);
         }
+        
     }
 }
 
@@ -48,9 +52,24 @@ export const updateCategories = (form) => {
         const res = await axios.post(`/category/update`, form)
         if(res.status === 201){
             return true
-            console.log(res);
         }else{
             console.log(res);
+        }
+    }
+}
+
+export const deleteCategories = (ids) => {
+    return async dispatch => {
+        const res = await axios.post(`/category/delete`, {
+            payload: {
+                ids
+            }
+        })
+        if(res.status === 201){
+            return true
+        }
+        else{
+            return false
         }
     }
 }
