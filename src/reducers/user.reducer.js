@@ -1,12 +1,9 @@
-/* eslint-disable import/no-anonymous-default-export */
-/* eslint-disable default-case */
 import { userConstants } from '../actions/constants'
 
 const initState = {
     error: null,
     message: '',
     loading: false
-
 }
 
 export default (state = initState, action) => {

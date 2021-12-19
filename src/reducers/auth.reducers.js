@@ -1,5 +1,3 @@
-/* eslint-disable default-case */
-/* eslint-disable import/no-anonymous-default-export */
 import { authConstants } from "../actions/constants"
 
 const initState = {
@@ -8,7 +6,7 @@ const initState = {
         firstName: '',
         lastName: '',
         email: '',
-        picures: ''
+        picture: ''
     },
     authenticate: false,
     authenticating: false,

@@ -7,7 +7,7 @@ export const login = (user) => {
 
     return async (dispatch) => {
         dispatch({ type: authConstants.LOGIN_REQUEST })
-        const res = await axios.post('/admin/signin', {
+        const res = await axios.post(`/admin/signin`, {
             ...user
         })
         if(res.status === 200) {
@@ -45,7 +45,7 @@ export const isUserLoggedIn = () => {
         }else{
             dispatch({
                 type: authConstants.LOGIN_FAILTURE,
-                payload: { error:'Failed to login ' }
+                payload: { error:'Failed to login' }
             })
         }
     }

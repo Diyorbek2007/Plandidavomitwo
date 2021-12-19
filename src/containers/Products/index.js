@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from 'react'
 import { Container, Row, Col, Table} from 'react-bootstrap'
-import { useSelector } from 'react-redux'
-import { useDispatch } from 'react-redux'
+import { useSelector , useDispatch} from 'react-redux'
 import { addProduct } from '../../actions'
 import Layout from '../../components/Layout'
 import Input from '../../components/UI/Input'
@@ -10,7 +9,7 @@ import Modal from '../../components/UI/Modal'
 import { generatePublicImg } from '../../urlConfig'
 import "./style.css"
 
-function Products() {
+function Products(props) {
 
     const [name , setName] = useState('')
     const [quantity , setQuantity] = useState('')
