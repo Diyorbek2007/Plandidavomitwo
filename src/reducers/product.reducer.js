@@ -1,5 +1,3 @@
-/* eslint-disable default-case */
-/* eslint-disable import/no-anonymous-default-export */
 import { productConstants } from "../actions/constants"
 
 const initState = {
@@ -10,7 +8,10 @@ const initState = {
         under15k: [],
         under20k: [],
         under30k: []
-    }
+    },
+    pageRequest: false,
+    page: {},
+    error: null
 }
 
 export default (state = initState, action) => {
@@ -22,6 +23,26 @@ export default (state = initState, action) => {
                 productsByPrice: {
                     ...action.payload.priceRange
                 }
+            }
+            break;
+        case productConstants.GET_PRODUCT_PAGE_REQUEST:
+            state = {
+                ...state,
+                pageRequest: true
+            }
+            break;
+        case productConstants.GET_PRODUCT_PAGE_SUCCESS:
+            state = {
+                ...state,
+                page: action.payload.products,
+                pageRequest: false
+            }
+            break;
+        case productConstants.GET_PRODUCT_PAGE_FAILURE:
+            state = {
+                ...state,
+                pageRequest: false,
+                error: action.payload.error
             }
             break;
     }
