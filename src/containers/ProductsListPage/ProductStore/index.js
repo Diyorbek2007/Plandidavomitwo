@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getProductsBySlug } from '../../../actions'
 import { generatePublicImg } from '../../../urlConfig'
 import { Link } from 'react-router-dom'
+import Card from '../../../components/UI/Card'
 
 function ProductStore (props){
 
@@ -26,11 +27,14 @@ function ProductStore (props){
             {
                 Object.keys(product.productsByPrice).map((key, index) => {
                     return (
-                        <div className="card">
-                            <div className="cardHeader">
-                                <div>{props.match.params.slug} mobile under {priceRange[key]}</div>
-                                <button>view all</button>
-                            </div>
+                        <Card
+                            headerLeft={`${props.match.params.slug} mobile under ${priceRange[key]}`}
+                            headerRight={<button>view all</button>}
+                            style={{
+                                width: 'calc(100% - 20px)',
+                                margin: '20px'
+                            }}
+                        >
                             <div style={{display : 'flex'}}>
                                 {
                                     product.productsByPrice[key].map(product => 
@@ -40,12 +44,12 @@ function ProductStore (props){
                                             display: 'block'
                                         }} className="productContainer">
                                             <div className="productImgContainer">
-                                                <img src={generatePublicImg} alt="" />
+                                                <img src={generatePublicImg(product.productPictures[0].img)} alt="" />
                                             </div>
                                             <div className="productInfo">
                                                 <div style={{margin: '5px 0'}}>{product.name}</div>
                                                 <div>
-                                                    <span>4.3</span>&nbsp;
+                                                    <span>4.3</span>&nbp;
                                                     <span>3353</span>
                                                 </div>
                                                 <div className="productPrice">{product.price}</div>
@@ -54,7 +58,7 @@ function ProductStore (props){
                                     )
                                 }
                             </div>
-                        </div>
+                        </Card>
                     );
                 })
             }

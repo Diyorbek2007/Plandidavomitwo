@@ -1,13 +1,18 @@
-/* .cartContainer{
-    width: 100%;
+.card{
+    width: 99%;
     background-color: #fff;
     border: 1px solid #cecece;
     box-shadow: 0 0 2px 2px #cecece;
 }
 
-.cartContainer{
+.cardHeader{
     display: flex;
     justify-content: space-between;
     padding: 20px 20px;
     border-bottom: 1px solid #cecece;
-} */
+}
+.cartContainer{
+    display: flex;
+    max-width: 1260px;
+    margin: 0 auto;
+}
