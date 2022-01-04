@@ -1,4 +1,7 @@
-export const api = 'http://localhost:3000/api';
+const baseUrl = 'http://localhost:3000';
+
+export const api = `${baseUrl}/api`
+
 export const generatePublicImg = (fileName) => {
-    return `http://localhost:3000/public/${fileName}`
+    return `${baseUrl}/public/${fileName}`
 }
