@@ -8,7 +8,7 @@ import PriceDetails from "../../components/PriceDetails";
 import "./style.css";
 import { MaterialButton } from "../../components/MaterialUI";
 
-function CartPage (props) {
+const CartPage = (props) => {
   const cart = useSelector((state) => state.cart);
   const auth = useSelector((state) => state.auth);
   // const cartItems = cart.cartItems;

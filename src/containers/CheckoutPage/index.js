@@ -89,7 +89,7 @@ const Address = ({
   );
 };
 
-const CheckoutPage = (props) => {
+function CheckoutPage (props) {
   const user = useSelector((state) => state.user);
   const auth = useSelector((state) => state.auth);
   const [newAddress, setNewAddress] = useState(false);
@@ -176,6 +176,7 @@ const CheckoutPage = (props) => {
       edit: false,
     }));
     setAddress(address);
+    //user.address.length === 0 && setNewAddress(true);
   }, [user.address]);
 
   useEffect(() => {

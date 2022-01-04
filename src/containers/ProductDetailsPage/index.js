@@ -46,8 +46,7 @@ function ProductDetailsPage (props) {
                 alt={`${product.productDetails.productPictures[0].img}`}
               />
             </div>
-
-            {/* action buttons */}
+            
             <div className="flexRow">
               <MaterialButton
                 title="ADD TO CART"

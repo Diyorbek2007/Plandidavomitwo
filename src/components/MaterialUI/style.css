@@ -11,6 +11,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .modalContainer{
   min-width: 400px;
   max-width: 90%;
@@ -21,6 +22,7 @@
   margin: 0 auto;
   overflow-x: hidden;
 }
+
 .modalClose{
   position: absolute;
   color: #fff;
@@ -28,16 +30,15 @@
   font-size: 20px;
 }
 
-/* Material Input */
 .materialInput{
   width: 100%;
   min-width: 300px;
   height: 30px;
   border-bottom: 2px solid #2874f0;
   position: relative;
-  /* background-color: red; */
   margin-top: 25px;
 }
+
 .materialInput input{
   width: 100%;
   flex: 1;
@@ -47,6 +48,7 @@
   background: transparent;
   line-height: 30px;
 }
+
 .materialInput .label{
   position: absolute;
   line-height: 30px;
@@ -56,11 +58,11 @@
   letter-spacing: 1px;
   transition: all 0.1s ease-in-out;
 }
+
 .materialInput .label.focus{
   top: -20px !important;
 }
 
-/* Material Button */
 .materialButton{
   width: 100%;
   display: inline-block;
@@ -74,15 +76,16 @@
   cursor: pointer;
   border-radius: 2px;
 }
+
 .materialButton:hover{
   box-shadow: 0 4px 6px 0 rgba(0,0,0,.12);
 }
 
-/* Material dropdown */
 .headerDropdownContainer{
   position: relative;
   display: inline-block;
 }
+
 .firstmenu{
   padding: 15px 20px;
   border-bottom: 1px solid #eee;
@@ -92,6 +95,7 @@
   justify-content: space-between;
  
 }
+
 .dropdown{
 right: 50%;
 position: absolute;
@@ -100,20 +104,24 @@ transform: translateX(50%);
 z-index: 1;
 display: none;
 }
+
 .dropdownMenu{
 background: #fff;
 box-shadow: 0 4px 16px 0 rgba(0,0,0,.2);
 background: #fff;
 border-radius: 2px;
 }
+
 .headerDropdownContainer:hover .dropdown{
   display: block;
 }
+
 .upArrowContainer{
   position: relative;
   width: 100%;
   height: 10px;
 }
+
 .upArrow{
   width: 0;
   height: 0;
@@ -124,14 +132,17 @@ border-radius: 2px;
   left: 50%;
   transform: translateX(-50%);
 }
+
 .headerDropdownMenu{
   margin: 0;
   padding: 0;
   background: #fff;
 }
+
 .headerDropdownMenu li{
   list-style: none;
 }
+
 .headerDropdownMenu li a{
   display: block;
   padding: 15px 20px;
@@ -141,6 +152,7 @@ border-radius: 2px;
   color: #212121;
   text-decoration: none;
 }
+
 .headerDropdownMenu li a:hover{
   background-color: #f0f0f0;
   cursor: pointer;
