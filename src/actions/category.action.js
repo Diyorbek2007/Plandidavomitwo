@@ -40,7 +40,6 @@ export const addCategory = (form) => {
                 })
             }
         } catch (error) {
-            
             console.log(error.response);
         }
         
@@ -72,11 +71,10 @@ export const deleteCategories = (ids) => {
                 ids
             }
         })
-        if(res.status === 201){
+        if(res.status == 201){
             dispatch(getAllCategory())
             dispatch({ type: categoryConstants.DELETE_CATEGORIES_SUCCESS })
-        }
-        else{
+        }else{
             const { error } = res.data;
             dispatch({
                 type: categoryConstants.DELETE_CATEGORIES_FAILURE,

@@ -22,7 +22,7 @@ function App() {
       dispatch(isUserLoggedIn());
     }
     if(auth.authenticate){
-      dispatch(getAllCategory())
+      // dispatch(getAllCategory())
       dispatch(getInitialData())
     }
     
